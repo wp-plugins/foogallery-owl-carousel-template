@@ -24,7 +24,7 @@
 if ( !class_exists( 'Owl_Carousel_Template_FooGallery_Extension' ) ) {
 
 	define('OwlC_URL', plugin_dir_url( __FILE__ ));
-	define('OwlC_VERSION', '1.0.0');
+	define('OwlC_VERSION', '1.0.1');
 
 	require_once( 'foogallery-owl-carousel-init.php' );
 
