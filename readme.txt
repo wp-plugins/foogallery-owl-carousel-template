@@ -4,7 +4,7 @@ Donate link: http://mattcromwell.com
 Tags: foogallery, owl carousel, responsive
 Requires at least: 3.8
 Tested up to: 3.9.1
-Stable tag: trunk
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -57,6 +57,8 @@ None yet.
 This is a template for [FooGallery](http://wordpres.org/plugins/foogallery). This plugin will not work without FooGallery first installed. It's free, so go ahead and install it and enjoy!
 
 == Changelog ==
+= 1.0.1 =
+* BUGFIX: Custom Link field in Attachment Details could not be deleted after inserted.
 
 = 1.0 =
 * Just released.
