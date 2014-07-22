@@ -47,9 +47,17 @@ None yet.
 
 == Screenshots ==
 
-Coming soon.
+1. Choose Owl Carousel from the "Gallery Template" field in FooGallery
+2. Custom settings for each Owl Carousel that control items per "stage", margin between items, navigation, pagination and more.
+3. Have multiple types, shapes, sizes and functionalities for multiple galleries on the same page. 
+4. Choose a custom link and target to launch from each image in your Carousel. Combined with FooBox Pro you can launch videos, forms, a Google Map, and more from each individual image in your Carousel.
+5. Choose from a plethora of styles and hover effects. See a preview live while you create your gallery.
 
 == Changelog ==
+= 1.0.2 =
+* UPDATE: Updated settings to use latest FooGallery Settings API changes
+* ENHANCEMENT: Conditionally show Autoplay when choosing "true"
+
 = 1.0.1 =
 * BUGFIX: Custom Link field in Attachment Details could not be deleted after inserted.
 
