@@ -3,7 +3,7 @@ Contributors: webdevmattcrom, fooplugins
 Donate link: http://mattcromwell.com
 Tags: foogallery, owl carousel, responsive
 Requires at least: 3.8
-Tested up to: 3.9.1
+Tested up to: 3.91
 Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -47,16 +47,17 @@ None yet.
 
 == Screenshots ==
 
-1. Choose "Owl Carousel" as your template in FooGallery
-2. Custom options for your Carousel
-3. Choose different sizes, shapes, and number of items per Carousel.
-4. Add custom links and targets. Even target FooBox.
-5. Choose custom hover effects and border styles. There's also a thumbnail preview, just like the default FooGallery templates.
-
-== Other Notes ==
-This is a template for [FooGallery](http://wordpres.org/plugins/foogallery). This plugin will not work without FooGallery first installed. It's free, so go ahead and install it and enjoy!
+1. Choose Owl Carousel from the "Gallery Template" field in FooGallery
+2. Custom settings for each Owl Carousel that control items per "stage", margin between items, navigation, pagination and more.
+3. Have multiple types, shapes, sizes and functionalities for multiple galleries on the same page. 
+4. Choose a custom link and target to launch from each image in your Carousel. Combined with FooBox Pro you can launch videos, forms, a Google Map, and more from each individual image in your Carousel.
+5. Choose from a plethora of styles and hover effects. See a preview live while you create your gallery.
 
 == Changelog ==
+= 1.0.2 =
+* UPDATE: Updated settings to use latest FooGallery Settings API changes
+* ENHANCEMENT: Conditionally show Autoplay when choosing "true"
+
 = 1.0.1 =
 * BUGFIX: Custom Link field in Attachment Details could not be deleted after inserted.
 
