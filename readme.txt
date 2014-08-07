@@ -4,7 +4,7 @@ Donate link: http://mattcromwell.com
 Tags: foogallery, owl carousel, responsive
 Requires at least: 3.8
 Tested up to: 3.91
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -57,6 +57,7 @@ None yet.
 = 1.0.2 =
 * UPDATE: Updated settings to use latest FooGallery Settings API changes
 * ENHANCEMENT: Conditionally show Autoplay when choosing "true"
+* ENHANCEMENT: Tighten CSS for circles style. Some themes add hover transitions to images with links which causes the circles style to flash a square during transition. This is fixed now.
 
 = 1.0.1 =
 * BUGFIX: Custom Link field in Attachment Details could not be deleted after inserted.
