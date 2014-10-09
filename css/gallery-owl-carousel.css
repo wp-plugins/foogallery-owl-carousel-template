@@ -24,13 +24,6 @@ opacity: 1;
 -o-transition: all 0 ease 0;
 transition: all 0 ease 0;
 max-height: 95%;
-width: 95%
-}
-
-.foogallery-owl-carousel.border-style-circle-white a,
-.foogallery-owl-carousel.border-style-circle-black a {
-position: relative;
-left: 10px;
 }
 
 /* Hover Effects */ 

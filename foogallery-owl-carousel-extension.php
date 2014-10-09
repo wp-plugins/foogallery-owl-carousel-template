@@ -13,7 +13,7 @@
  * @wordpress-plugin
  * Plugin Name: FooGallery Owl Carousel Template
  * Description: An Owl Carousel template with multiple options for presentation and functionality. Full details on Owl Carousel <a href="http://www.owlcarousel.owlgraphic.com/" target="_blank">here</a>
- * Version:     1.0.3
+ * Version:     1.0.3.1
  * Author:       Matt Cromwell
  * Author URI:  http://mattcromwell.com
  * License:     GPL-2.0+
@@ -24,7 +24,7 @@
 if ( !class_exists( 'Owl_Carousel_Template_FooGallery_Extension' ) ) {
 
 	define('OwlC_URL', plugin_dir_url( __FILE__ ));
-	define('OwlC_VERSION', '1.0.3');
+	define('OwlC_VERSION', '1.0.3.1');
 	define( 'OwlC_FG_SLUG', 'owl-carousel' );
 	define( 'OwlC_FG_PATH', plugin_dir_path( __FILE__ ));
 	define( 'OwlC_FG_EXTENSION_FILE', __FILE__);
