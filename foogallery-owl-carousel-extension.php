@@ -13,7 +13,7 @@
  * @wordpress-plugin
  * Plugin Name: FooGallery Owl Carousel Template
  * Description: An Owl Carousel template with multiple options for presentation and functionality. Full details on Owl Carousel <a href="http://www.owlcarousel.owlgraphic.com/" target="_blank">here</a>
- * Version:     1.0.3.1
+ * Version:     1.1
  * Author:       Matt Cromwell
  * Author URI:  http://mattcromwell.com
  * License:     GPL-2.0+
@@ -244,6 +244,18 @@ if ( !class_exists( 'Owl_Carousel_Template_FooGallery_Extension' ) ) {
 						'choices' => array(
 							'true' => __( 'True', 'foogallery-owl-carousel' ),
 							'false' => __( 'False', 'foogallery-owl-carousel' ),
+						)
+					),
+					array(
+						'id'      => 'hash',
+						'title'   => __('Enable Deeplinking?', 'foogallery-owl-carousel'),
+						'section' => __('Carousel Navigation', 'foogallery-owl-carousel' ),
+						'desc'    => __('Setting this to "Yes" will give each image in your Carousel a unique hashtag url that will appear in the address bar. This can be used to force your carousel to navigate to that image with a link. <a href="http://docs.fooplugins.com/foogallery/foogallery-owl-carousel-documentation/#ipt_kb_toc_555_5" target="_blank">See documentation for examples</a>.', 'foogallery-owl-carousel'),
+						'default' => 'true',
+						'type'    => 'radio',
+						'choices' => array(
+							'false' => __( 'No thanks!', 'foogallery-owl-carousel' ),
+							'true' => __( 'Yes please!', 'foogallery-owl-carousel' ),
 						)
 					),
 					array(

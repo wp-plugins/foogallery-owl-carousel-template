@@ -12,11 +12,6 @@ $args = foogallery_gallery_template_setting( 'thumbnail_size', 'thumbnail' );
 //add the link setting to the args
 $args['link'] = foogallery_gallery_template_setting( 'thumbnail_link', 'image' );
 
-//general FooGallery settings that are useful for owl
-$height = $args['height']; //image height
-$width = $args['width']; //image width
-$gallid = $current_foogallery->ID; // current FooGallery ID
-
 //get which lightbox we want to use
 $lightbox = foogallery_gallery_template_setting( 'lightbox', 'unknown' );
 
@@ -25,6 +20,7 @@ $items = foogallery_gallery_template_setting( 'items', '3' );
 $nav = foogallery_gallery_template_setting( 'nav', 'true' );
 $dots = foogallery_gallery_template_setting( 'dots', 'true' );
 $autoplay = foogallery_gallery_template_setting( 'autoplay', 'true' );
+$hash = foogallery_gallery_template_setting( 'hash', 'true' );
 $pause = foogallery_gallery_template_setting( 'pause', 'true' );
 $seconds = foogallery_gallery_template_setting( 'seconds', '4000' );
 $loop = foogallery_gallery_template_setting( 'loop', 'true' );
@@ -33,6 +29,16 @@ $hover_effect = foogallery_gallery_template_setting( 'hover-effect', 'hover-effe
 $border_style = foogallery_gallery_template_setting( 'border-style', 'border-style-square-white' );
 $animation = foogallery_gallery_template_setting( 'animation', false );
 $showdesc = foogallery_gallery_template_setting( 'showdesc', false );
+if(($border_style == '') || ($border_style == 'border-style-rounded')) {
+$hasborder = '';
+} else {$hasborder = 'hasborder';}
+
+//general FooGallery settings that are useful for owl
+if($hasborder == 'hasborder'){
+	$height = ($args['height'] + 20);
+} else {$height = $args['height'];}
+$width = $args['width']; //image width
+$gallid = $current_foogallery->ID; // current FooGallery ID
 ?>
 
 <style>
@@ -40,11 +46,12 @@ $showdesc = foogallery_gallery_template_setting( 'showdesc', false );
 #foogall-<?php echo $gallid; ?> .foo-item {max-height: <?php echo $height ; ?>px;}
 </style>
 
-<div id="foogall-<?php echo $gallid; ?>" class="<?php echo foogallery_build_class_attribute( $current_foogallery, 'foogallery-lightbox-' . $lightbox, 'owl-carousel ' . $hover_effect, $border_style); ?>">
+<div id="foogall-<?php echo $gallid; ?>" class="<?php echo foogallery_build_class_attribute( $current_foogallery, 'foogallery-lightbox-' . $lightbox, 'owl-carousel ' . $hover_effect, $border_style, $hasborder); ?>">
 	<?php
 		foreach ( $current_foogallery->attachments() as $attachment ) {
 			$title = $attachment->title;
 			$strippedtitle = str_replace(' ', '_', $title);
+			if($hash=='true'){$dohash = 'data-hash="' . $datahash . '"';}else{$dohash='';}
 			if (empty($title)) {
 				$datahash = 'no-title'; 	/* every image needs a data-hash 
 													   so we'll give it one in case it got deleted somehow */
@@ -52,7 +59,7 @@ $showdesc = foogallery_gallery_template_setting( 'showdesc', false );
 				$datahash = $strippedtitle; //the image title with _ instead of spaces
 			}
 			?>
-			<div class="foo-item" data-hash="<?php echo $datahash ; ?>"> 
+			<div class="foo-item" <?php echo $dohash ; ?>> 
 			<?php
 				$cap = $attachment->caption;
 				$desc = $attachment->description;
@@ -121,7 +128,7 @@ jQuery(function($){
 		smartSpeed:250,
 		navSpeed: 1250,
 		autoplayHoverPause: <?php echo $pause; ?>,
-		URLhashListener: true,
+		URLhashListener: <?php echo $hash; ?>,
 		lazyLoad: true,
 	});
 });
