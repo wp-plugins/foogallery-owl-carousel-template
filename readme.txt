@@ -17,6 +17,7 @@ Owl Carousel for FooGallery let's you display your images in a wide variety of f
 [See full documentation for Owl Carousel here](http://docs.fooplugins.com/foogallery/owl-carousel/)
 
 **FEATURES**
+
 * Same great image cropping that FooGallery provides
 * Same great border and hover styles that FooGallery provides
 * Responsive to any size width
