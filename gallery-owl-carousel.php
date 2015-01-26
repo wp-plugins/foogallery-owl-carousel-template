@@ -29,6 +29,13 @@ $hover_effect = foogallery_gallery_template_setting( 'hover-effect', 'hover-effe
 $border_style = foogallery_gallery_template_setting( 'border-style', 'border-style-square-white' );
 $animation = foogallery_gallery_template_setting( 'animation', false );
 $showdesc = foogallery_gallery_template_setting( 'showdesc', false );
+$advanced = foogallery_gallery_template_setting( 'enable-advanced', 'no' );
+$responsive = foogallery_gallery_template_setting( 'enable-responsive', 'no' );
+$itemsat0 = foogallery_gallery_template_setting( 'items-at-0', false );
+$itemsat480 = foogallery_gallery_template_setting( 'items-at-480', false );
+$itemsat960 = foogallery_gallery_template_setting( 'items-at-960', false );
+$autowidth = foogallery_gallery_template_setting( 'autowidth', false );
+
 if(($border_style == '') || ($border_style == 'border-style-rounded')) {
 $hasborder = '';
 } else {$hasborder = 'hasborder';}
@@ -69,7 +76,7 @@ $gallid = $current_foogallery->ID; // current FooGallery ID
 				
 				// show caption if it exists
 				// basically, if both caption and description are empty, show nothing here
-				// otherwise, check if the either exists then show it
+				// otherwise, check if either exists then show it
 				if($showdesc == true) { 
 					if((empty($cap)) && (empty($desc))) { } else { ?>
 					<div class="owl-caption">
@@ -117,19 +124,35 @@ jQuery(function($){
 		break;
 		case 'left' : 
 		break;
-		} ?>
+		} if($advanced == 'yes') { ?>
+		URLhashListener: <?php echo $hash; ?>,
+		dots: <?php echo $dots; ?>,
+		<?php  if($responsive = 'yes') { ?>
+		responsiveClass: true,
+		responsive:{
+			0:{
+				items: <?php echo $itemsat0 ?>,
+			},
+			480:{
+				items: <?php echo $itemsat480 ?>,
+			},
+			960:{
+				items: <?php echo $itemsat960 ?>,
+			}
+		}, 
+		<?php } else { } ?>
+		<?php } else { } ?>
 		items: <?php echo $items; ?>,
 		nav:<?php echo $nav; ?>,
 		margin: <?php echo $margin; ?>,
 		loop:<?php echo $loop; ?>,
-		dots:<?php echo $dots; ?>,
 		autoplay: <?php echo $autoplay; ?>,
 		autoplaySpeed: <?php echo $seconds; ?>,
 		smartSpeed:250,
 		navSpeed: 1250,
 		autoplayHoverPause: <?php echo $pause; ?>,
-		URLhashListener: <?php echo $hash; ?>,
 		lazyLoad: true,
+		autoWidth: <?php echo $autowidth; ?>
 	});
 });
 </script>
