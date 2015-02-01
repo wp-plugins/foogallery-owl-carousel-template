@@ -82,6 +82,10 @@ Awww shucks! I lean on tons of other stronger, smarter, more skilled people than
 5. Choose from a plethora of styles and hover effects. See a preview live while you create your gallery.
 
 == Changelog ==
+
+= 1.2.1 =
+* FIX: Updated init slug to prevent duplicate extensions issue with FooGallery Extensions panel
+
 = 1.2 =
 * NEW FEATURE: Added break points so different number of images can appear at different break points.
 * NEW FEATURE: Added auto-width so images with different heights can be on the same stage but same height, auto-widths.
