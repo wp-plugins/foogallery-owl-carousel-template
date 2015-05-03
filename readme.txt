@@ -4,7 +4,7 @@ Donate link: http://www.mattcromwell.com/product/foogallery-owl-carousel-templat
 Tags: foogallery, owl carousel, responsive
 Requires at least: 3.8
 Tested up to: 4.1
-Stable tag: 1.2.2
+Stable tag: 1.2.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -73,6 +73,39 @@ Make sure you go to "FooGallery > Extensions" and make sure you see "Owl Carouse
 5. **How do you do it, Matt!? How do you make such awesome stuff!?**  
 Awww shucks! I lean on tons of other stronger, smarter, more skilled people than me and work at it every day. If you really feel that way, feel free to send me a [tip over here](http://www.mattcromwell.com/product/foogallery-owl-carousel-template/)
 
+6. **Can I update the text for the "prev" and "next" buttons?**
+Yes, since version 1.2.3 you can now use a simple filter to change the text of those buttons. Here's some sample code that you can add into your theme's function.php file to customize that text.
+
+**Update the "prev" text**
+`add_filter('owl_prev_text','new_prev_text');
+
+function new_prev_text() {
+	return 'Go to the previous slide';
+}`
+
+**Update the "next" text**
+`add_filter('owl_next_text','new_next_text');
+
+function new_next_text() {
+	return 'Go to the next slide';
+}`
+
+You can also return simple HTML. This allows you to swap out the text with font icons instead. For example, Twentyfifteen preloads the [Genericons](http://genericons.com/) font-icons on the front end for you. So you could swap out the text with a right and left button. In that case, your code would look like this:
+
+**Use a Genericon Left Arrow for "prev"**
+`add_filter('owl_prev_text','new_prev_text');
+
+function new_prev_text() {
+	return '<span class="genericon genericon-leftarrow"></span>';
+}`
+
+**Use a Genericon Right Arrow for "next"**
+`add_filter('owl_next_text','new_next_text');
+
+function new_next_text() {
+	return '<span class="genericon genericon-rightarrow"></span>';
+}`
+
 == Screenshots ==
 
 1. Choose Owl Carousel from the "Gallery Template" field in FooGallery
@@ -82,6 +115,9 @@ Awww shucks! I lean on tons of other stronger, smarter, more skilled people than
 5. Choose from a plethora of styles and hover effects. See a preview live while you create your gallery.
 
 == Changelog ==
+= 1.2.3 =
+* ENHANCEMENT: Added a filter to allow the prev/next text buttons to be customized. See [FAQ #6](https://wordpress.org/plugins/foogallery-owl-carousel-template/faq/) for example code.
+
 = 1.2.2 =
 * FIX: Tightened CSS for Thumbnails with borders
 * FIX: Fixed bug where advanced options where always enabled on front-end.
