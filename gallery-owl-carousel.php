@@ -151,7 +151,7 @@ jQuery(function($){
 		autoplaySpeed: <?php echo $seconds; ?>,
 		smartSpeed:250,
 		navSpeed: 1250,
-		navText: ['<?php printf(__(apply_filters('owl_prev_text','prev','foogallery-owl-carousel'))); ?>', '<?php printf(__(apply_filters('owl_next_text','next','foogallery-owl-carousel'))); ?>'],
+		navText: ['<?php printf(__(apply_filters('owl_prev_text',esc_html__('prev'),'foogallery-owl-carousel'))); ?>', '<?php printf(__(apply_filters('owl_next_text',esc_html__('next'),'foogallery-owl-carousel'))); ?>'],
 		autoplayHoverPause: <?php echo $pause; ?>,
 		lazyLoad: true,
 		autoWidth: <?php echo $autowidth; ?>
