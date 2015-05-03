@@ -34,7 +34,7 @@ jQuery(function () {
 
 jQuery(document).ready( function($) {
 	//OnLoad, hide these:
-	// $('tr.gallery_template_field-owl-carousel-animation').hide(400)
+	$('tr.gallery_template_field-owl-carousel-animation').hide(400)
 	$('tr.gallery_template_field-owl-carousel-pause').hide(400)
 	$('tr.gallery_template_field-owl-carousel-seconds').hide(400)
 	$('tr.gallery_template_field-owl-carousel-dots').hide(400)
@@ -51,7 +51,7 @@ jQuery(document).ready( function($) {
 		//Define variables for shorthand reference
 		var items = $('select[name*="owl-carousel_items"] option:selected').val();
 		var autoplayOn = $('input#FooGallerySettings_owl-carousel_autoplay0').is(':checked');
-		var advancedOn = $('input#FooGallerySettings_owl-carousel_enable-advanced1').is(':checked');
+		var advancedOn = $('input#FooGallerySettings_owl-carousel_enable_advanced1');
 		
 		//Onload, if "Items" is "1" show "Animations"
 		if( items == 1) {
@@ -74,7 +74,7 @@ jQuery(document).ready( function($) {
 		}
 		
 		//Onload, if "Enable Advanced" is "Yes", show all the Advanced Settings
-		if( advancedOn == true) {
+		if( advancedOn.is(':checked')) {
 			$('tr.gallery_template_field-owl-carousel-dots').show()
 			$('tr.gallery_template_field-owl-carousel-hash').show()
 			$('tr.gallery_template_field-owl-carousel-enable-responsive').show()
@@ -121,8 +121,8 @@ jQuery(document).ready( function($) {
 	
 	//Hide/Show Advaced
 	//on change of "Enable Advanced"
-	$('input[name*="owl-carousel_enable-advanced"]').change(function () { 
-		if( $(this).attr('id') == 'FooGallerySettings_owl-carousel_enable-advanced0') { 
+	$('input[name*="owl-carousel_enable_advanced"]').change(function () { 
+		if( $(this).attr('id') == 'FooGallerySettings_owl-carousel_enable_advanced0') { 
 			$('tr.gallery_template_field-owl-carousel-dots').hide(400)
 			$('tr.gallery_template_field-owl-carousel-hash').hide(400)
 			$('tr.gallery_template_field-owl-carousel-enable-responsive').hide(400)
@@ -130,7 +130,7 @@ jQuery(document).ready( function($) {
 			$('tr.gallery_template_field-owl-carousel-items-at-480').hide(400)
 			$('tr.gallery_template_field-owl-carousel-items-at-960').hide(400);
 		}
-		if( $(this).attr('id') == 'FooGallerySettings_owl-carousel_enable-advanced1') { 
+		if( $(this).attr('id') == 'FooGallerySettings_owl-carousel_enable_advanced1') { 
 			$('tr.gallery_template_field-owl-carousel-dots').show(400)
 			$('tr.gallery_template_field-owl-carousel-hash').show(400)
 			$('tr.gallery_template_field-owl-carousel-enable-responsive').show(400)

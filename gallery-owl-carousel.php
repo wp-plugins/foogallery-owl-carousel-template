@@ -29,7 +29,7 @@ $hover_effect = foogallery_gallery_template_setting( 'hover-effect', 'hover-effe
 $border_style = foogallery_gallery_template_setting( 'border-style', 'border-style-square-white' );
 $animation = foogallery_gallery_template_setting( 'animation', false );
 $showdesc = foogallery_gallery_template_setting( 'showdesc', false );
-$advanced = foogallery_gallery_template_setting( 'enable-advanced', 'no' );
+$advanced = foogallery_gallery_template_setting( 'enable_advanced', 'no' );
 $responsive = foogallery_gallery_template_setting( 'enable-responsive', 'no' );
 $itemsat0 = foogallery_gallery_template_setting( 'items-at-0', false );
 $itemsat480 = foogallery_gallery_template_setting( 'items-at-480', false );
@@ -50,10 +50,10 @@ $gallid = $current_foogallery->ID; // current FooGallery ID
 
 <style>
 /*Used to keep captions inside the visible area*/
-#foogall-<?php echo $gallid; ?> .foo-item {max-height: <?php echo $height ; ?>px;}
+#foogallery-gallery-<?php echo $gallid; ?> .foo-item {max-height: <?php echo $height ; ?>px;}
 </style>
 
-<div id="foogall-<?php echo $gallid; ?>" class="<?php echo foogallery_build_class_attribute( $current_foogallery, 'foogallery-lightbox-' . $lightbox, 'owl-carousel ' . $hover_effect, $border_style, $hasborder); ?>">
+<div id="foogallery-gallery-<?php echo $gallid; ?>" class="<?php echo foogallery_build_class_attribute( $current_foogallery, 'foogallery-lightbox-' . $lightbox, 'owl-carousel ' . $hover_effect, $border_style, $hasborder); ?>">
 	<?php
 		foreach ( $current_foogallery->attachments() as $attachment ) {
 			$title = $attachment->title;
@@ -96,7 +96,7 @@ $gallid = $current_foogallery->ID; // current FooGallery ID
 /* The Owl Initialization Script
 /* The first lines conditionally show the slide animation */
 jQuery(function($){
-	$('#foogall-<?php echo $gallid; ?>').owlCarousel({
+	$('#foogallery-gallery-<?php echo $gallid; ?>').owlCarousel({
 	<?php switch ($animation) {
 		case 'lightspeed' : ?>
 		animateOut: 'lightSpeedOut',
@@ -124,7 +124,8 @@ jQuery(function($){
 		break;
 		case 'left' : 
 		break;
-		} if($advanced == 'yes') { ?>
+		} 
+		if($advanced == 'yes') { ?>
 		URLhashListener: <?php echo $hash; ?>,
 		dots: <?php echo $dots; ?>,
 		<?php  if($responsive = 'yes') { ?>

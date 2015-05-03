@@ -4,7 +4,7 @@ Donate link: http://www.mattcromwell.com/product/foogallery-owl-carousel-templat
 Tags: foogallery, owl carousel, responsive
 Requires at least: 3.8
 Tested up to: 4.1
-Stable tag: 1.2.1
+Stable tag: 1.2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -82,6 +82,11 @@ Awww shucks! I lean on tons of other stronger, smarter, more skilled people than
 5. Choose from a plethora of styles and hover effects. See a preview live while you create your gallery.
 
 == Changelog ==
+= 1.2.2 =
+* FIX: Tightened CSS for Thumbnails with borders
+* FIX: Fixed bug where advanced options where always enabled on front-end.
+* FIX: Fixed bug where back-end conditional fields weren't show/hiding reliably.
+* Other miscellaneous CSS updates for stability across themes.
 
 = 1.2.1 =
 * FIX: Updated init slug to prevent duplicate extensions issue with FooGallery Extensions panel

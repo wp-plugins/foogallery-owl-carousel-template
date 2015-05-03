@@ -136,16 +136,16 @@
      display:  none;
  }
  .owl-carousel .owl-item  {
-     position:  relative;
-     min-height:  1px;
-     float:  left;
-     -webkit-tap-highlight-color:  transparent;
-     -webkit-touch-callout:  none;
-     -webkit-user-select:  none;
-     -moz-user-select:  none;
-     -ms-user-select:  none;
-     user-select:  none;
-     padding:  0 0 6px 0;
+	position:  relative;
+	min-height:  1px;
+	float:  left;
+	-webkit-tap-highlight-color:  transparent;
+	-webkit-touch-callout:  none;
+	-webkit-user-select:  none;
+	-moz-user-select:  none;
+	-ms-user-select:  none;
+	user-select:  none;
+	padding:  0 0 6px 0;
 }
  .owl-carousel .owl-item img  {
      display:  block;
@@ -198,21 +198,35 @@
 
 
 /* Border styles */ 
+.foo-item {
+	line-height: 0; 
+    overflow: hidden;
+    position:  relative;
+}
+
+.foo-item a {margin: 4px;}
+
+.foo-item a img{width: 100%;}
+
+.hasborder .owl-stage-outer {
+    margin: 0 -5px 0 0;
+	padding: 0 0 0 5px;
+}
+
 .foogallery-owl-carousel.border-style-rounded a,
 .foogallery-owl-carousel.foogallery-lightbox-none.border-style-rounded .foo-item  {
      border-radius:  5px;
      -webkit-border-radius:  5px;
      -moz-border-radius:  5px;
  }
-  .foogallery-owl-carousel.border-style-square-white a,
+
 .foogallery-owl-carousel.foogallery-lightbox-none.border-style-square-white .foo-item  {
      border:  5px solid #FFF;
      -webkit-box-shadow:  0 0 10px rgba(0,  0,  0,  0.5);
      -moz-box-shadow:  0 0 10px rgba(0, 0, 0, 0.5);
      box-shadow:  0 1px 5px rgba(0,  0,  0,  0.5);
  }
-  .foogallery-owl-carousel.border-style-circle-white a,  
-  .foogallery-owl-carousel.foogallery-lightbox-none.border-style-circle-white img  {
+  .foogallery-owl-carousel.border-style-circle-white a  {
      border-radius:  50%;
      -webkit-border-radius:  50%;
      -moz-border-radius:  50%;
@@ -242,6 +256,7 @@
   .foogallery-owl-carousel.border-style-inset a  {
      position:  relative;
      max-width:  100%;
+	 margin: 0;
  }
   .foogallery-owl-carousel.border-style-inset a::before  {
      content:  "";
@@ -314,10 +329,6 @@ max-height:  95%;
  
 
 /*Caption Styles*/
-.foo-item  {
-    overflow: hidden;
-     position:  relative;
-}
 
 .owl-caption  {
     position:  absolute;
